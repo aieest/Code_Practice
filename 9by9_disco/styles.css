@@ -1,0 +1,46 @@
+/*
+:root {
+    --bg: #411e15;
+    --one: #80b0a4;
+    --two: #d04f24;
+    --three: #d9ac36;
+    --four: #d6742b;
+}
+*/
+:root {
+    --bg: whitesmoke;
+    --one: #84dcc6;
+    --two: #a5ffd6;
+    --three: #ffa69e;
+    --four: #ff686b;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+}
+
+div {
+    background-color: var(--one);
+    width: 25vh;
+    height: 25vh;
+    border-radius: 20px;
+}

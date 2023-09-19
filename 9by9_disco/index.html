@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <content>
+        <div id="lights"></div>
+        <div id="lights"></div>
+        <div id="lights"></div>
+        <div id="lights"></div>
+        <div id="lights"></div>
+        <div id="lights"></div>
+        <div id="lights"></div>
+        <div id="lights"></div>
+        <div id="lights"></div>
+    </content>
+
+<script>
+
+function getRandomColor() {
+    const colors = ['--one', '--two', '--three', '--four'];
+    const randomIndex = Math.floor(Math.random() * colors.length);
+    return getComputedStyle(document.documentElement).getPropertyValue(colors[randomIndex]);
+}
+
+function changeCubeColors() {
+    const cubes = document.querySelectorAll('div');
+    cubes.forEach((cube) => {
+        cube.style.transition = 'background-color 0.5s ease'; // Smooth transition
+        cube.style.backgroundColor = getRandomColor();
+    });
+}
+
+// Change colors every few seconds
+setInterval(changeCubeColors, 3000); // Change colors every 3 seconds
+
+</script>
+</body>
+</html>
