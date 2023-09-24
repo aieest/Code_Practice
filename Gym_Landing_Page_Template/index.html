@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/36b55f0412.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<body>
+    <main>
+
+        <section id="home">
+            <h1 id="home-text">LET'S GET FIT</h1>
+        </section>
+
+        <section id="pricing">
+
+            <div class="price-card">
+                <h1 class="price-head">Basic</h1>
+                <div class="price-info">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <p>Access to basic workouts</p>
+                </div>
+                <p class="price">$9.99/month</p>
+            </div>
+
+            <span class="gray-line"></span>
+
+            <div class="price-card">
+                <h1 class="price-head">Pro</h1>
+                <div class="price-info">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <p>Access to all workouts</p>
+                    <p>Personalized training plans</p>
+                </div>
+                
+                <p class="price">$19.99/month</p>
+            </div>
+
+            <span class="gray-line"></span>
+
+            <div class="price-card">
+                <h1 class="price-head  ultimate">Ultimate</h1>
+                <div class="price-info">
+                    <p class="ultimate">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <p class="ultimate">Access to all workouts</p>
+                    <p class="ultimate">Personalized training plans</p>
+                    <p class="ultimate">24/7 personal trainer support</p>
+                </div>
+                
+                <p class="price ultimate">$29.99/month</p>
+            </div>
+        </section>
+
+        <section class="faqs-contact">
+            <content id="faqs">
+                <h1>FAQs & Contacts</h1>
+                <div class="faq-item">
+                    <h3 class="accordion-header">How do I sign up for the Ultimate plan?</h3>
+                    <div class="accordion-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam condimentum justo vel mauris malesuada, eu dapibus mi luctus.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <h3 class="accordion-header">What are the benefits of the Pro plan?</h3>
+                    <div class="accordion-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam commodo faucibus lectus, nec venenatis orci dignissim sit amet.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <h3 class="accordion-header">Can I switch from the Basic plan to the Ultimate plan?</h3>
+                    <div class="accordion-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et justo id lorem finibus iaculis eu vel nunc.</p>
+                    </div>
+                </div>
+            </content>
+            <content id="contacts">
+                <div class="contact-block">
+                    <i class="fa-brands fa-instagram" id="icon"></i>
+                    <p>instagram.com/letsgetfit</p>
+                </div>
+                <div class="contact-block">
+                    <i class="fa-sharp fa-solid fa-envelope" id="icon"></i>
+                    <p>contact@example.com</p>
+                </div>
+                <div class="contact-block">
+                    <i class="fa-sharp fa-solid fa-phone" id="icon"></i>
+                    <p>(555) 123-4567</p>
+                </div>
+                <div class="contact-block">
+                    <i class="fa-sharp fa-solid fa-location-dot" id="icon"></i>
+                    <p>123 Gritty Street, Modern City</p>
+                </div>
+            </content>
+        </section>
+    </main>
+    <script>
+        // JavaScript for the accordion functionality
+        const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+        accordionHeaders.forEach(header => {
+            header.addEventListener('click', () => {
+                header.classList.toggle('active');
+                const content = header.nextElementSibling;
+                content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + 'px';
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+<!--
+
+This is just a sample project, the photo belongs to
+Cesar Galeão: https://www.pexels.com/photo/man-holding-brown-rope-3253501/
+
+
+-->

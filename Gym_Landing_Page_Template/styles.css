@@ -1,0 +1,292 @@
+:root {
+    --color-one: #FBFBFB;
+    --color-two: #a324d6;
+    --color-three: #6e1891;
+    --color-four: #1e0627;
+    --color-five: #000000; /* Backgroun */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+main {
+    display: flexbox;
+    align-items: center;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: var(--color-five);
+}
+
+/*  *****HOME SECTION***** */
+
+#home {
+    display: grid;
+    place-items: center;
+    background-image: url('https://drive.google.com/uc?export=view&id=179Ptb9465Of5hbWslK1AdP7UHRXF7CRp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+#home-text {
+    font-size: 72px;
+    color: var(--color-one);
+}
+
+
+/* *****PRICING SECTION***** */
+
+#pricing {
+    display: flex;
+    justify-content: center;
+    align-items: stretch; /* To make all price cards have the same height */
+    gap: 20px;
+    padding-top: 7rem;
+    padding-top: 2rem;
+    height: 100vh;
+    background-color: var(--color-five);
+}
+
+.price-card {
+    margin: 20px;
+    padding: 30px;
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.price-head {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: var(--color-one);
+}
+
+.price-info p {
+    font-size: 18px;
+    margin: 40px;
+    flex: 1;
+    color: var(--color-one);
+}
+
+.price {
+    font-size: 30px;
+    font-weight: bold;
+    color: #333;
+    margin-top: auto;
+    color: var(--color-one);
+}
+
+.gray-line {
+    background-color: var(--color-four);
+    width: 1px;
+    height: 90%;
+    margin: 0 auto;
+}
+
+.ultimate, p.ultimate {
+    color: var(--color-two);
+}
+
+/*  *****FAQs & CONTACTS SECTION***** */
+
+.faqs-contact {
+    display: flex;
+    justify-content: center;
+    margin: 10rem 0 5rem 0;
+    padding: 0 0 0 0;
+    height: 70vh;
+    background-color: var(--color-five);
+}
+
+/*  *****FAQs SECTION***** */
+
+#faqs {
+    width: 90vh;
+    margin-right: 30px;
+}
+
+#faqs h1 {
+    color: var(--color-one);
+}
+
+.faq-item {
+    border-top: 1px solid var(--color-one);
+    padding: 20px 0;
+    cursor: pointer;
+}
+
+
+.accordion-header {
+    font-size: 24px;
+    transition: color 0.25s; /* Add a smooth color transition */
+    color: var(--color-one);
+}
+
+.accordion-header:hover {
+    color: var(--color-three); /* Change color on hover */
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s ease-out; /* Add a smooth dropdown animation */
+}
+
+.accordion-content p {
+    font-size: 18px;
+    margin-top: 10px;
+    color: var(--color-one);
+}
+
+/*  *****CONTACTS SECTION***** */
+
+#contacts {
+    width: 70vh;
+    margin-left: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 15px;
+    justify-items: center;
+    align-items: center;
+}
+
+.contact-block {
+    height: 200px;
+    width: 200px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-one);
+    transition: 0.5s ease-out;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.contact-block:hover {
+    color: var(--color-three);
+    box-shadow: 1px 1px 15px var(--color-two);
+}
+
+#icon {
+    font-size: 125px;
+    margin-bottom: 10px;
+    color: inherit;
+}
+
+div.contact-block p {
+    text-align: center;
+    color: inherit;
+}
+
+/* For screens up to 768px width */
+@media screen and (max-width: 768px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #home {
+        margin-bottom: 300px;
+    }
+
+    #home-text {
+        text-align: center;
+    }
+
+    #pricing {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 100px;
+        margin-bottom: 200px;
+        padding-top: 2rem;
+    }
+
+    .price-card {
+        margin: 20px 0;
+    }
+
+    .gray-line {
+        width: 80%;
+        height: 1px;
+    }
+
+    .faqs-contact {
+        margin-top: 200px;
+        padding-top: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #faqs, #contacts {
+        width: 80%;
+        margin: 0;
+        text-align: center;
+    }
+
+    #contacts {
+        grid-template-columns: 1fr 1fr;
+        row-gap: 10px;
+        column-gap: 10px;
+        margin-top: 100px;
+        margin-bottom: 250px;
+    }
+
+    .contact-block {
+        width: 70%;
+        height: auto;
+        align-items: center;
+    }
+
+    #icon {
+        font-size: 100px;
+    }
+
+    .contact-block p {
+        padding: 0 10px 0 10px;
+        text-align: center;
+        overflow-wrap: anywhere;
+        font-size: 12px;
+    }
+}
+
+/* Adjust font sizes and spacing for smaller screens */
+@media screen and (max-width: 480px) {
+    #home-text {
+        font-size: 48px;
+    }
+
+    .price-head {
+        font-size: 24px;
+    }
+
+    .price-info p {
+        font-size: 16px;
+        margin: 20px;
+    }
+
+    .price {
+        font-size: 24px;
+    }
+
+    .accordion-header {
+        font-size: 20px;
+    }
+
+    .accordion-content p {
+        font-size: 16px;
+    }
+
+    .contact-block {
+        font-size: 14px;
+    }
+}
